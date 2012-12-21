@@ -29,81 +29,81 @@ File::Status File::setStatus()
 			return mStatus = IOError;
 		default:
 			return mStatus = UnknownError;
-	 }
+    }
 }
 
 File::Status File::open(const char *filename, const AccessMode openMode)
 {
-   static char filebuf[2048];
+    static char filebuf[2048];
 	StringCchCopy(filebuf, 2048, filename);
-   
-   //backslash(filebuf);
-
+    
+    //backslash(filebuf);
+    
 	assert(INVALID_HANDLE_VALUE == (HANDLE) mHandle); // File already in use
-
-   if (Closed != mStatus)
+    
+    if (Closed != mStatus)
 		close();
 	
-   // create the appropriate type of file...
-   switch (openMode)
-   {
+    // create the appropriate type of file...
+    switch (openMode)
+    {
 		case Read:
 			mHandle = (void *)CreateFile(filebuf,
-                                    GENERIC_READ,
-                                    FILE_SHARE_READ,
-                                    NULL,
-                                    OPEN_EXISTING,
-                                    FILE_ATTRIBUTE_NORMAL | FILE_FLAG_SEQUENTIAL_SCAN,
-                                    NULL);
+                                         GENERIC_READ,
+                                         FILE_SHARE_READ,
+                                         NULL,
+                                         OPEN_EXISTING,
+                                         FILE_ATTRIBUTE_NORMAL | FILE_FLAG_SEQUENTIAL_SCAN,
+                                         NULL);
 			break;
 		case Write:
 			mHandle = (void *)CreateFile(filebuf,
-                                    GENERIC_WRITE,
-                                    0,
-                                    NULL,
-                                    CREATE_ALWAYS,
-                                    FILE_ATTRIBUTE_NORMAL | FILE_FLAG_SEQUENTIAL_SCAN,
-                                    NULL);
+                                         GENERIC_WRITE,
+                                         0,
+                                         NULL,
+                                         CREATE_ALWAYS,
+                                         FILE_ATTRIBUTE_NORMAL | FILE_FLAG_SEQUENTIAL_SCAN,
+                                         NULL);
 			break;
 		case ReadWrite:
 			mHandle = (void *)CreateFile(filebuf,
-                                    GENERIC_WRITE | GENERIC_READ,
-                                    0,
-                                    NULL,
-                                    OPEN_ALWAYS,
-                                    FILE_ATTRIBUTE_NORMAL | FILE_FLAG_SEQUENTIAL_SCAN,
-                                    NULL);
+                                         GENERIC_WRITE | GENERIC_READ,
+                                         0,
+                                         NULL,
+                                         OPEN_ALWAYS,
+                                         FILE_ATTRIBUTE_NORMAL | FILE_FLAG_SEQUENTIAL_SCAN,
+                                         NULL);
 			break;
 		case WriteAppend:
 			mHandle = (void *)CreateFile(filebuf,
-                                    GENERIC_WRITE,
-                                    0,
-                                    NULL,
-                                    OPEN_ALWAYS,
-                                    FILE_ATTRIBUTE_NORMAL | FILE_FLAG_SEQUENTIAL_SCAN,
-                                    NULL);
+                                         GENERIC_WRITE,
+                                         0,
+                                         NULL,
+                                         OPEN_ALWAYS,
+                                         FILE_ATTRIBUTE_NORMAL | FILE_FLAG_SEQUENTIAL_SCAN,
+                                         NULL);
 			break;
 		default:
-        assert(false);    // impossible
-   }
-
+            assert(false);    // impossible
+    }
+    
 	if (INVALID_HANDLE_VALUE == (HANDLE) mHandle)
-     return setStatus();
-
+        return setStatus();
+    
 	// successfully created file, so set the file capabilities...
 	switch (openMode)
 	{
-	case Read:
-		mCanRead = true;
-		break;
-	case Write:
-	case WriteAppend:
-		mCanWrite = true;
-		break;
-	case ReadWrite:
-		mCanRead = true;
-		mCanWrite = true;
-		break;
+        case Read:
+            mCanRead = true;
+            break;
+        case Write:
+        case WriteAppend:
+            mCanWrite = true;
+            break;
+        case ReadWrite:
+            mCanRead = true;
+            mCanWrite = true;
+            break;
 	}
 	return mStatus = Ok;
 }
@@ -112,10 +112,10 @@ File::Status File::close()
 {
 	if (Closed == mStatus)
 		return mStatus;
-
+    
 	if (INVALID_HANDLE_VALUE != (HANDLE) mHandle)
 	{
-	  if (0 == CloseHandle((HANDLE) mHandle))
+        if (0 == CloseHandle((HANDLE) mHandle))
 			return setStatus();
 	}
 	mHandle = (void *) INVALID_HANDLE_VALUE;
@@ -127,7 +127,7 @@ File::Status File::flush()
 	assert(Closed != mStatus); // File closed
 	assert(INVALID_HANDLE_VALUE != (HANDLE) mHandle); // Invalid file handle
 	assert(true == canWrite()); // Cannot flush a read-only file
-
+    
 	if (0 != FlushFileBuffers((HANDLE) mHandle))
 		return setStatus();
 	else
@@ -141,7 +141,7 @@ File::Status File::read(U32 size, void *dst, U32 *bytesRead)
 	assert(NULL != dst); // Destination is NULL
 	assert(true == canRead()); // Write only file
 	assert(0 != size); // Size is 0
-
+    
 	if (Ok != mStatus || 0 == size)
 		return mStatus;
 	else
@@ -166,7 +166,7 @@ File::Status File::write(U32 size, const void *src, U32 *bytesWritten)
 	assert(NULL != src); // Src is NULL
 	assert(true == canWrite()); // Read only file
 	assert(0 != size); // Size is 0
-
+    
 	if ((Ok != mStatus && EOS != mStatus) || 0 == size)
 		return mStatus;
 	else

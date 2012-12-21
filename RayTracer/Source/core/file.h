@@ -17,7 +17,7 @@ public:
 		Closed,
 		UnknownError
 	};
-
+    
 	enum AccessMode
 	{
 		Read         = 0,
@@ -25,26 +25,26 @@ public:
 		ReadWrite    = 2,
 		WriteAppend  = 3
 	};
-
+    
 public:
 	File();
 	virtual ~File();
-
+    
 	Status setStatus();
-
+    
 	Status open(const char *filename, const AccessMode openMode);
-
+    
 	Status close();
-
+    
 	bool canRead() { return mCanRead; }
 	bool canWrite() { return mCanWrite; }
-
+    
 	Status flush();
-
-   Status read(U32 size, void *dst, U32 *bytesRead = NULL);
-
-   Status write(U32 size, const void *src, U32 *bytesWritten = NULL);
-
+    
+    Status read(U32 size, void *dst, U32 *bytesRead = NULL);
+    
+    Status write(U32 size, const void *src, U32 *bytesWritten = NULL);
+    
 private:
 	void *mHandle;
 	Status mStatus;

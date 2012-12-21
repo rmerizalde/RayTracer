@@ -8,9 +8,9 @@
 
 inline void cross(const Point3D &v1, const Point3D &v2, Point3D *res)
 {
-   res->x = (v1.y * v2.z) - (v1.z * v2.y);
-   res->y = (v1.z * v2.x) - (v1.x * v2.z);
-   res->z = (v1.x * v2.y) - (v1.y * v2.x);
+    res->x = (v1.y * v2.z) - (v1.z * v2.y);
+    res->y = (v1.z * v2.x) - (v1.x * v2.z);
+    res->z = (v1.x * v2.y) - (v1.y * v2.x);
 }
 
 inline F64 dot(const Point3D &p1, const Point3D &p2)

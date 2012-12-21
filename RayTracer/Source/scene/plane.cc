@@ -26,7 +26,7 @@ void Plane::calculateDistance(const Ray& ray, F64 &distance)
 	const Point3D &V = ray.getDirection();
 	const Point3D &P = mAnchor;
 	const Point3D &N = mNormal;
-
+    
 	F64 D = -dot(N, P);
 	F64 dNV = dot(N, V);
 	distance = -(dot(N, S) + D) / dNV;
@@ -38,20 +38,20 @@ SceneObject::IntersectResult Plane::intersect(const Ray& ray, F64 &distance, Int
 	const Point3D &V = ray.getDirection();
 	const Point3D &P = mAnchor;
 	const Point3D &N = mNormal;
-
+    
 	F64 D = -dot(N, P);
 	F64 dNV = dot(N, V);
 	IntersectResult res = MISS;
-
+    
 	if (dNV > EPSILON || dNV < -EPSILON)
 	{
 		F64 t = -(dot(N, S) + D) / dNV;
-
+        
 		if (t > EPSILON && t < distance)
 		{
 			if (list)
 				list->add(this, t);
-
+            
 			distance = t;
 			res = HIT;
 		}

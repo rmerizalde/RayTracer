@@ -13,26 +13,26 @@ public:
 	F64 x;
 	F64 y;
 	F64 z;
-
+    
 	Point3D();
 	Point3D(const Point3D&);
 	Point3D(const F64 _x, const F64 _y, const F64 _z);
-
+    
 	void set(const F64 _x, const F64 _y, const F64 _z);
-
+    
 	F64 length() const;
-
+    
 	void normalize();
-
+    
 	Point3D  operator+(const Point3D&) const;
 	Point3D  operator-(const Point3D&) const;
 	Point3D& operator+=(const Point3D&);
 	Point3D& operator-=(const Point3D&);
-
-   Point3D  operator*(const F64) const;
-   Point3D  operator/(const F64) const;
-   Point3D& operator*=(const F64);
-   Point3D& operator/=(const F64);
+    
+    Point3D  operator*(const F64) const;
+    Point3D  operator/(const F64) const;
+    Point3D& operator*=(const F64);
+    Point3D& operator/=(const F64);
 };
 
 class Point4D
@@ -42,11 +42,11 @@ public:
 	F64 y;
 	F64 z;
 	F64 w;
-
+    
 	Point4D();
 	Point4D(const Point4D&);
 	Point4D(const F64 _x, const F64 _y, const F64 _z, const F64 _w);
-
+    
 	void set(const F64 _x, const F64 _y, const F64 _z, const F64 _w);
 };
 
@@ -55,13 +55,13 @@ class PointUV
 public:
 	F64 u;
 	F64 v;
-
+    
 	PointUV();
 	PointUV(const PointUV&);
 	PointUV(const F64 _u, const F64 _v);
-
+    
 	void set(const F64 _u, const F64 _v);
-
+    
 	PointUV  operator-(const PointUV&) const;
 };
 
@@ -85,17 +85,17 @@ inline F64 Point3D::length() const
 
 inline void Point3D::set(const F64 _x, const F64 _y, const F64 _z)
 {
-   x = _x;
-   y = _y;
-   z = _z;
+    x = _x;
+    y = _y;
+    z = _z;
 }
 
 inline void Point3D::normalize()
 {
-   F64 l = 1.0 / length();
-   x *= l;
-   y *= l;
-   z *= l;
+    F64 l = 1.0 / length();
+    x *= l;
+    y *= l;
+    z *= l;
 }
 
 inline Point3D Point3D::operator+(const Point3D& add) const
@@ -165,9 +165,9 @@ inline Point4D::Point4D(const F64 _x, const F64 _y, const F64 _z, const F64 _w) 
 
 inline void Point4D::set(const F64 _x, const F64 _y, const F64 _z, const F64 _w)
 {
-   x = _x;
-   y = _y;
-   z = _z;
+    x = _x;
+    y = _y;
+    z = _z;
 	w = _w;
 }
 
@@ -181,7 +181,7 @@ inline PointUV::PointUV(const PointUV& copy)
 	u = copy.u;
 	v = copy.v;
 }
-	
+
 inline PointUV::PointUV(const F64 _u, const F64 _v)
 {
 	u = _u;

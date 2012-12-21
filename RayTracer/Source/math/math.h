@@ -16,10 +16,10 @@
 #ifndef _RAY_H_
 #include "math/ray.h"
 #endif
-        
+
 #ifdef PI
-	#undef PI
-#endif 
+#undef PI
+#endif
 
 #define PI (3.141592653589793238462643)
 #define PI2 (3.141592653589793238462643 * 2)

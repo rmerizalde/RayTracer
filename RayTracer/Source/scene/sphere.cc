@@ -21,19 +21,19 @@ PointUV Sphere::getUV(const Point3D &point, const Point3D &normal) const
 	M.normalize();
 	F64 u = acos(dot(M, G)) / PI2;
 	F64 v = acos(dot(North, N)) / PI;
-
+    
 	/*Point3D planeNormal;
-	cross(G, North, &planeNormal);
-	F64 D = -dot(planeNormal, point);*/
-
+     cross(G, North, &planeNormal);
+     F64 D = -dot(planeNormal, point);*/
+    
 	Point3D planeNormal;
-   cross(G, North, &planeNormal);
+    cross(G, North, &planeNormal);
 	F64 D = -dot(planeNormal, mCenter);
-   F64 val = dot(point, planeNormal) + D;
+    F64 val = dot(point, planeNormal) + D;
 	
 	if (val < 0.0)
 		u = 1 - u;
-
+    
 	return PointUV(u, v);
 }
 
@@ -50,14 +50,14 @@ SceneObject::IntersectResult Sphere::intersect(const Ray& ray, F64 &distance, In
 	F64 c = dot(S, S) - (dot(S, mCenter) * 2) + dot(mCenter, mCenter) - mSquaredRadius;
 	F64 D = (b * b) - 4 * c;
 	IntersectResult res = MISS;
-
+    
 	if (D > 0)
 	{
 		F64 sqrtD = sqrt(D);
 		F64 t1 = (-b - sqrtD) / 2;
 		F64 t2 = (-b + sqrtD) / 2;
-
-		processIntersection(ray, t1, res, distance, list);		
+        
+		processIntersection(ray, t1, res, distance, list);
 		processIntersection(ray, t2, res, distance, list);
 	}
 	else if (isZero(D))
@@ -73,7 +73,7 @@ void Sphere::perturbNormal(Point3D &normal, const U32 i, const U32 j) const
 	const BumpMap *bumpMap = getBumpMap();
 	Point3D U;
 	cross(normal, getNorth(), &U);
-	Point3D V; 
+	Point3D V;
 	cross(normal, U, &V);
 	F32 k1 =  (bumpMap->getHeight(i-1, j) - bumpMap->getHeight(i+1, j)) / 2;
 	F32 k2 =  (bumpMap->getHeight(i, j-1) - bumpMap->getHeight(i, j+1)) / 2;
