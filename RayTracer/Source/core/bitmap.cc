@@ -13,15 +13,15 @@ Bitmap::Bitmap() : internalFormat(RGBA),
 
 Bitmap::~Bitmap()
 {
-	if (pBits != NULL)
-		delete[] pBits;
+    if (pBits != NULL)
+        delete[] pBits;
 }
 
 void Bitmap::allocateBitmap(const U32 in_width, const U32 in_height, const BitmapFormat in_format)
 {
-	//--------------------------------------
-	if (pBits != NULL)
-		delete[] pBits;
+    //--------------------------------------
+    if (pBits != NULL)
+        delete[] pBits;
     //-------------------------------------- Some debug checks...
     //U32 svByteSize = byteSize;
     //U8 *svBits = pBits;
@@ -29,15 +29,15 @@ void Bitmap::allocateBitmap(const U32 in_width, const U32 in_height, const Bitma
     assert(in_width != 0 && in_height != 0);
     
     internalFormat = in_format;
-	width          = in_width;
+    width          = in_width;
     height         = in_height;
-	
+    
     bytesPerPixel = 1;
     switch (internalFormat)
-	{
+    {
         case RGBA:
             bytesPerPixel = 4;
-			break;
+            break;
         default:
             assert(false);
             break;
@@ -49,7 +49,7 @@ void Bitmap::allocateBitmap(const U32 in_width, const U32 in_height, const Bitma
     // Set up the memory...
     byteSize = allocPixels;
     pBits    = new U8[byteSize];
-	memset(pBits, 0xFF, byteSize);
+    memset(pBits, 0xFF, byteSize);
     
     //if(svBits != NULL)
     //{
@@ -60,23 +60,24 @@ void Bitmap::allocateBitmap(const U32 in_width, const U32 in_height, const Bitma
 
 bool Bitmap::read(File &file)
 {
-	file.read(4, &width);
-	width = convertBEndianToLEndian(width);
-	file.read(4, &height);
-	height = convertBEndianToLEndian(height);
-	allocateBitmap(width, height, Bitmap::RGBA);
+    file.read(4, &width);
+    width = convertBEndianToLEndian(width);
+    file.read(4, &height);
+    height = convertBEndianToLEndian(height);
+    allocateBitmap(width, height, Bitmap::RGBA);
     file.read(byteSize, pBits);
-	
-	// change format from ARGB to RGBA
-	U8 *begin = pBits;
-	U8 *end = pBits + byteSize;
-	for (U8 *itr = begin; itr != end; itr += 4)
-	{
-		U32 alpha = itr[0];
-		itr[0] = itr[1];
-		itr[1] = itr[2];
-		itr[2] = itr[3];
-		itr[3] = alpha;
-	}	
-	return true;
+    
+    // change format from ARGB to RGBA
+    U8 *begin = pBits;
+    U8 *end = pBits + byteSize;
+    for (U8 *itr = begin; itr != end; itr += 4)
+    {
+        U32 alpha = itr[0];
+        itr[0] = itr[1];
+        itr[1] = itr[2];
+        itr[2] = itr[3];
+        itr[3] = alpha;
+    }
+    
+    return true;
 }
