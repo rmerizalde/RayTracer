@@ -18,73 +18,73 @@ QuadricSurface::QuadricSurface(F64 a, F64 b, F64 c, F64 d, F64 e, F64 f, F64 g, 
     row.set(g / 2.0, h / 2.0, j / 2.0, k);
     mMatrix.setRow(3, row);
     
-	for (U32 i = 0; i < 4; i++)
-		mCutPlanes[i] = NULL;
+    for (U32 i = 0; i < 4; i++)
+        mCutPlanes[i] = NULL;
 }
 
 QuadricSurface::~QuadricSurface()
 {
-	if (mTexturePoly)
-		delete mTexturePoly;
+    if (mTexturePoly)
+        delete mTexturePoly;
 }
 
 void QuadricSurface::setTexture(Texture *texture)
 {
-	Parent::setTexture(texture);
-	if (mTexturePoly)
-		mTexturePoly->setTexture(texture);
+    Parent::setTexture(texture);
+    if (mTexturePoly)
+        mTexturePoly->setTexture(texture);
 }
 
 void QuadricSurface::setBumpMap(BumpMap *bumpMap)
 {
-	Parent::setBumpMap(bumpMap);
-	if(mTexturePoly)
-		mTexturePoly->setBumpMap(bumpMap);
+    Parent::setBumpMap(bumpMap);
+    if(mTexturePoly)
+        mTexturePoly->setBumpMap(bumpMap);
 }
 
 void QuadricSurface::setNormalMap(NormalMap *normalMap)
 {
-	Parent::setNormalMap(normalMap);
-	if(mTexturePoly)
-		mTexturePoly->setNormalMap(normalMap);
+    Parent::setNormalMap(normalMap);
+    if(mTexturePoly)
+        mTexturePoly->setNormalMap(normalMap);
 }
 
 void QuadricSurface::setOpacityMap(OpacityMap *opacityMap)
 {
-	Parent::setOpacityMap(opacityMap);
-	if(mTexturePoly)
-		mTexturePoly->setOpacityMap(opacityMap);
+    Parent::setOpacityMap(opacityMap);
+    if(mTexturePoly)
+        mTexturePoly->setOpacityMap(opacityMap);
 }
 
 void QuadricSurface::setBounds(F32 widhtLeft, F32 widthRight, F32 heightBottom, F32 heightTop)
 {
-	mTexturePoly = new PolygonD();
+    mTexturePoly = new PolygonD();
     
     
-	// Wrap the surface in a rectangle
-	Point3D p0(-widhtLeft, -heightBottom, 0.0);
-	Point3D p1(widthRight, -heightBottom, 0.0);
-	Point3D p3(widthRight, heightTop, 0.0);
-	Point3D p2(-widhtLeft, heightTop, 0.0);
+    // Wrap the surface in a rectangle
+    Point3D p0(-widhtLeft, -heightBottom, 0.0);
+    Point3D p1(widthRight, -heightBottom, 0.0);
+    Point3D p3(widthRight, heightTop, 0.0);
+    Point3D p2(-widhtLeft, heightTop, 0.0);
     
-	mTexturePoly->addVertex(p0);
-	mTexturePoly->addVertex(p1);
-	mTexturePoly->addVertex(p2);
-	mTexturePoly->addVertex(p3);
-	mTexturePoly->preInitialize();
-	mWidthLeft = widhtLeft;
-	mWidthRight = widthRight;
-	mHeightTop = heightTop;
-	mHeightBottom = heightBottom;
+    mTexturePoly->addVertex(p0);
+    mTexturePoly->addVertex(p1);
+    mTexturePoly->addVertex(p2);
+    mTexturePoly->addVertex(p3);
+    mTexturePoly->preInitialize();
+    mWidthLeft = widhtLeft;
+    mWidthRight = widthRight;
+    mHeightTop = heightTop;
+    mHeightBottom = heightBottom;
     
-	mCutPlanes[0] = new Plane(Point3D(0.0, heightTop, 0.0), Point3D(0.0, 1.0, 0.0));
-	mCutPlanes[1] = new Plane(Point3D(-widhtLeft, 0.0, 0.0), Point3D(-1.0, 0.0, 0.0));
-	mCutPlanes[2] = new Plane(Point3D(widthRight, 0.0, 0.0), Point3D(1.0, 0.0, 0.0));
-	mCutPlanes[3] = new Plane(Point3D(0.0, -heightBottom, 0.0), Point3D(0.0, -1.0, 0.0));
+    mCutPlanes[0] = new Plane(Point3D(0.0, heightTop, 0.0), Point3D(0.0, 1.0, 0.0));
+    mCutPlanes[1] = new Plane(Point3D(-widhtLeft, 0.0, 0.0), Point3D(-1.0, 0.0, 0.0));
+    mCutPlanes[2] = new Plane(Point3D(widthRight, 0.0, 0.0), Point3D(1.0, 0.0, 0.0));
+    mCutPlanes[3] = new Plane(Point3D(0.0, -heightBottom, 0.0), Point3D(0.0, -1.0, 0.0));
     
-	for (U32 i = 0; i < 4; i++)
-		if (mCutPlanes[i])
-			addCutPlane(mCutPlanes[i]);
+    for (U32 i = 0; i < 4; i++)
+        if (mCutPlanes[i])
+            addCutPlane(mCutPlanes[i]);
 }
 
 PointUV QuadricSurface::getUV(const Point3D &point, const Point3D &normal) const
@@ -134,7 +134,7 @@ SceneObject::IntersectResult QuadricSurface::intersect(const Ray& ray, F64 &dist
     F64 K = m[15];
     
     const Point3D &S = ray.getOrigin();
-	const Point3D &V = ray.getDirection();
+    const Point3D &V = ray.getDirection();
     F64 xe = S.x;
     F64 ye = S.y;
     F64 ze = S.z;
@@ -151,24 +151,24 @@ SceneObject::IntersectResult QuadricSurface::intersect(const Ray& ray, F64 &dist
                                                            G * xe + H * ye + J * ze) + K;
     
     F64 disc = (b * b) - 4 * a * c;
-	IntersectResult res = MISS;
+    IntersectResult res = MISS;
     
     if (disc > EPSILON)
-	{
-		F64 sqrtD = sqrt(disc);
-		F64 t1 = (-b - sqrtD) / (2 * a);
-		F64 t2 = (-b + sqrtD) / (2 * a);
+    {
+        F64 sqrtD = sqrt(disc);
+        F64 t1 = (-b - sqrtD) / (2 * a);
+        F64 t2 = (-b + sqrtD) / (2 * a);
         
-		processIntersection(ray, t1, res, distance, list);
-		processIntersection(ray, t2, res, distance, list);
-	}
-	else if (isZero(disc))
-	{
-		F64 t = -b / (2 * a);
-		processIntersection(ray, t, res, distance, list);
-	}
+        processIntersection(ray, t1, res, distance, list);
+        processIntersection(ray, t2, res, distance, list);
+    }
+    else if (isZero(disc))
+    {
+        F64 t = -b / (2 * a);
+        processIntersection(ray, t, res, distance, list);
+    }
     
-	return res;
+    return res;
 }
 
 void QuadricSurface::perturbNormal(Point3D &normal, const U32 i, const U32 j) const

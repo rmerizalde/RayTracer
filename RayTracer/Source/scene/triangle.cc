@@ -34,14 +34,14 @@ void Triangle::perturbNormal(Point3D &normal, const U32 i, const U32 j) const
 
 SceneObject::IntersectResult Triangle::intersect(const Ray& ray, F64& distance, IntersectionList* list) const
 {
-	F64 t = distance;
-	SceneObject::IntersectResult intersectsPlane = mPlane->intersect(ray, t);
+    F64 t = distance;
+    SceneObject::IntersectResult intersectsPlane = mPlane->intersect(ray, t);
     
-	if (intersectsPlane)
-	{
-		const Point3D &S = ray.getOrigin();
-		const Point3D &V = ray.getDirection();
-		Point3D P = S + V * t;
+    if (intersectsPlane)
+    {
+        const Point3D &S = ray.getOrigin();
+        const Point3D &V = ray.getDirection();
+        Point3D P = S + V * t;
         Point3D R = P - mVertexTable[mP0Index];
         F64 dotRQ1 = dot(R, mQ1);
         F64 dotRQ2 = dot(R, mQ2);
@@ -51,9 +51,9 @@ SceneObject::IntersectResult Triangle::intersect(const Ray& ray, F64& distance, 
         
         if (w0 >= 0.0 && w1 >= 0.0 && w2 >= 0.0)
         {
-			if (list) list->add(this, t);
-			distance = t;
-			return HIT;
+            if (list) list->add(this, t);
+            distance = t;
+            return HIT;
             
         }
     }

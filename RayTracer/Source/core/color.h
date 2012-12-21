@@ -21,13 +21,13 @@ public:
     
     void set(const F32 r, const F32 g, const F32 b, const F32 a = 1.0f);
     
-	ColorF& operator+=(const ColorF& add);
-	ColorF operator+(const ColorF& add) const;
+    ColorF& operator+=(const ColorF& add);
+    ColorF operator+(const ColorF& add) const;
     
-	ColorF& operator*=(F32 mul);
-	ColorF operator*(F32 mul) const;
+    ColorF& operator*=(F32 mul);
+    ColorF operator*(F32 mul) const;
     
-	void clamp();
+    void clamp();
 };
 
 // Inlines
@@ -55,11 +55,11 @@ inline void ColorF::set(const F32 r, const F32 g, const F32 b, const F32 a)
 
 inline ColorF& ColorF::operator+=(const ColorF& add)
 {
-	red += add.red;
-	green += add.green;
-	blue += add.blue;
-	alpha += add.alpha;
-	return *this;
+    red += add.red;
+    green += add.green;
+    blue += add.blue;
+    alpha += add.alpha;
+    return *this;
 }
 
 inline ColorF ColorF::operator+(const ColorF& add) const
@@ -72,11 +72,11 @@ inline ColorF ColorF::operator+(const ColorF& add) const
 
 inline ColorF& ColorF::operator*=(F32 mul)
 {
-	red *= mul;
-	green *= mul;
-	blue *= mul;
-	//alpha *= mul;
-	return *this;
+    red *= mul;
+    green *= mul;
+    blue *= mul;
+    //alpha *= mul;
+    return *this;
 }
 
 inline ColorF ColorF::operator*(F32 mul) const

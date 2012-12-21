@@ -27,7 +27,7 @@ typedef double             F64;
 
 inline U32 convertLEndianToBEndian(U32 i)
 {
-	return ((i >> 24) & 0x000000ff) |
+    return ((i >> 24) & 0x000000ff) |
     ((i >> 8)  & 0x0000ff00) |
     ((i << 8)  & 0x00ff0000) |
     ((i << 24) & 0xff000000);

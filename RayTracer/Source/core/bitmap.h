@@ -11,20 +11,20 @@ class Bitmap
 {
 public:
     enum BitmapFormat
-	{
+    {
         RGBA = 0
     };
     
-	Bitmap();
+    Bitmap();
     ~Bitmap();
     
-	bool read(File &file);
+    bool read(File &file);
     
 private:
-	void allocateBitmap(const U32 in_width, const U32 in_height, const BitmapFormat in_format);
+    void allocateBitmap(const U32 in_width, const U32 in_height, const BitmapFormat in_format);
     
 private:
-	BitmapFormat internalFormat;
+    BitmapFormat internalFormat;
 public:
     U8* pBits;            // Master bytes
     U32 byteSize;
