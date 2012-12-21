@@ -1,7 +1,7 @@
 RayTracer
 =========
 
-Around 2007 I attended a Computer Graphics cource at UCR (Universidad de Costa Rica). I've never had so much a fun in a course even though I was not on Master's program.
+Around 2007 I attended a Computer Graphics course at UCR (Universidad de Costa Rica). I've never had so much a fun in course like I did in this one. I was not in Master's program, I was just a listener.
 
 We develop multiple projects and this is one of them. We had to deliver a Ray Tracer in a few weeks. The first version was very basic, for the second one we added some interesting effects.
 
