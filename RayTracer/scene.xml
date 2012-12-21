@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<X3D version="3.0" profile="Core">
+  <Scene>
+    <!-- 10 -5 -20 -->
+    <Viewpoint position="15 -10 -60" />
+    <!-- Sky -->
+    <Shape>
+      <Appearance>
+        <Material ambientIntensity="1.0" diffuseColor="0.329411765 0.607843137 0.780392157" shininess="0.0" />
+      </Appearance>
+      <Sphere radius="100" />
+    </Shape>
+
+    <!-- Trash -->
+    <Transform translation="-5.0 4.2 9.0">
+      <!-- Top -->
+      <Transform translation="0.0 -4.0 0.0" rotation="1 0 0 -1.25">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2"  diffuseColor="0.431372549 0.431372549 0.431372549" specularColor="1.0 1.0 1.0" shininess="0.0" />
+          </Appearance>
+          <Polygon points="0.0 0.0 0.0   -7.0 0.0 0.0   -7.0 -3.0 0.0   0.0 -3.0 0.0"/>
+        </Shape>
+      </Transform>
+      <!-- Front -->
+      <Shape>
+        <Appearance>
+          <Material ambientIntensity="0.2"  diffuseColor="0.329411765 0.741176471 0.329411765" specularColor="1.0 1.0 1.0" shininess="0.0" />
+        </Appearance>
+        <Polygon points="0.0 0.0 0.0   -7.0 0.0 0.0   -7.0 -4.0 0.0   0.0 -4.0 0.0"/>
+      </Shape>
+      <!-- Side -->
+      <Shape>
+        <Appearance>
+          <Material ambientIntensity="0.2"  diffuseColor="0.329411765 0.741176471 0.329411765" specularColor="1.0 1.0 1.0" shininess="0.0" />
+        </Appearance>
+        <Polygon points="0.0 0.0 0.0   0.0 0.0 3.0   0.0 -5.0 3.0   0.0 -4.0 0.0"/>
+      </Shape>
+    </Transform>
+
+    <!-- Tires -->
+    <Transform translation="-3.0 3.7 10.0">
+      <CutPlane anchor="0.0 -0.5 0.0" normal="0.0 -1.0 0.0" />
+      <CutPlane anchor="0.0 0.5 0.0" normal="0.0 1.0 0.0" />
+      <Shape>
+        <Appearance>
+          <Material ambientIntensity="0.2" diffuseColor="0.188235294 0.188235294 0.188235294" shininess="0" />
+        </Appearance>
+        <Sphere radius="1.5" />
+      </Shape>
+      <Transform translation="-0.2 -1.0 -1.0">
+        <CutPlane anchor="0.0 -0.5 0.0" normal="0.0 -1.0 0.0" />
+        <CutPlane anchor="0.0 0.5 0.0" normal="0.0 1.0 0.0" />
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="0.188235294 0.188235294 0.188235294" shininess="0" />
+          </Appearance>
+          <Sphere radius="1.5" />
+        </Shape>
+        <Transform translate="0.0 -0.75 0.0" rotation="1 0 0 1.5707963267948966192313216916398">
+          <Shape>
+            <Appearance>
+              <Material ambientIntensity="0.2" diffuseColor="0.188235294 0.188235294 0.188235294" shininess="0" />
+            </Appearance>            
+            <Disk outerRadius="1.5" normal="0.0 -1.0 0.0" />
+          </Shape>
+        </Transform>
+      </Transform>
+      <Transform translation="0.2 -2.0 -0.5">
+        <CutPlane anchor="0.0 -0.5 0.0" normal="0.0 -1.0 0.0" />
+        <CutPlane anchor="0.0 0.5 0.0" normal="0.0 1.0 0.0" />
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="0.188235294 0.188235294 0.188235294" shininess="0" />
+          </Appearance>
+          <Sphere radius="1.5" />
+        </Shape>
+        <Transform translate="0.0 -0.75 0.0" rotation="1 0 0 1.5707963267948966192313216916398">
+          <Shape>
+            <Appearance>
+              <Material ambientIntensity="0.2" diffuseColor="0.188235294 0.188235294 0.188235294" shininess="0" />
+            </Appearance>
+            <Disk outerRadius="1.5" innerRadius="0.6"  normal="0.0 -1.0 0.0" />
+          </Shape>
+        </Transform>
+      </Transform>
+    </Transform>
+
+
+    <!-- Barrels -->
+    <Transform translation="6.0 3.7 10.0">
+      <!-- Barrel #1 -->
+      <CutPlane anchor="0.0 0.0 0.0" normal="0.0 -1.0 0.0" />
+      <CutPlane anchor="0.0 0.5 0.0" normal="0.0 1.0 0.0" />
+      <Shape>
+        <Appearance>
+          <Material ambientIntensity="0.2" diffuseColor="0.094117647 0.454901961 0.803921569" shininess="0.0" />
+        </Appearance>
+        <Sphere radius="1.3"/>
+      </Shape>
+      <Shape>
+        <Appearance>
+          <Material ambientIntensity="0.2" diffuseColor="0.094117647 0.454901961 0.803921569" shininess="0.0" />
+        </Appearance>
+        <Cylinder radius="1.3" height="3.0"/>
+      </Shape>
+
+      <!-- Barrel lid #1 -->
+      <Transform translation="0.0 -3.0 0.0">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="1 0.870588235 0.678431373" shininess="0.0" />
+          </Appearance>
+          <Cylinder radius="1.3"  height="0.3" />
+        </Shape>
+        <Transform rotation="1 0 0 1.5707963267948966192313216916398">
+          <Shape>
+            <Appearance>
+              <Material ambientIntensity="0.2" diffuseColor="1 0.870588235 0.678431373" shininess="0.0" />
+            </Appearance>
+            <Disk radius="1.3" />
+          </Shape>
+         </Transform>
+       </Transform>
+
+
+      <!-- Barrel #2 -->
+      <Transform translation="2.65 0.0 0.0" >
+        <CutPlane anchor="0.0 0.0 0.0" normal="0.0 -1.0 0.0" />
+        <CutPlane anchor="0.0 0.5 0.0" normal="0.0 1.0 0.0" />
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="0.094117647 0.454901961 0.803921569" shininess="0.0" />
+          </Appearance>
+          <Sphere radius="1.3"/>
+        </Shape>
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="0.094117647 0.454901961 0.803921569" shininess="0.0" />
+          </Appearance>
+          <Cylinder radius="1.3" height="3.0"/>
+        </Shape>
+
+        <!-- Barrel lid #2 -->
+        <Transform translation="0.0 -3.0 0.0" >
+          <Shape>
+            <Appearance>
+              <Material ambientIntensity="0.2" diffuseColor="1 0.870588235 0.678431373" shininess="0.0" />
+            </Appearance>
+            <Cylinder radius="1.3"  height="0.3" />
+          </Shape>
+          <Transform rotation="1 0 0 1.5707963267948966192313216916398">
+            <Shape>
+              <Appearance>
+                <Material ambientIntensity="0.2" diffuseColor="1 0.870588235 0.678431373" shininess="0.0" />
+              </Appearance>
+              <Disk radius="1.3" />
+            </Shape>
+          </Transform>            
+        </Transform>
+      </Transform>
+    </Transform>
+
+
+
+    <!-- Sign -->
+    <Transform translation="-6.0 1.5 -2.0" rotation="1 0 0 3.1415926535897932384626433832795">
+      <Transform translation="0.11 0.0 0.0" rotation="0 0 1 -0.52359877559829887307710723054658">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="0.960784314 0.960784314 0.960784314" shininess="0.0" />
+          </Appearance>
+          <Polygon points="0.0 0.0 0.0   0.0 0.0 3.0   0.0 -1.5 3.0   0.0 -1.5 0.0" />"
+        </Shape>
+      </Transform>
+
+      <Transform translation="0.11 0.0 0.0" rotation="0 0 1 0.52359877559829887307710723054658">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="0.960784314 0.960784314 0.960784314" shininess="0.0" />
+          </Appearance>
+          <Polygon points="0.0 0.0 0.0   0.0 0.0 3.0   0.0 -1.5 3.0   0.0 -1.5 0.0" />"
+        </Shape>
+      </Transform>
+      <Transform translation="0.13 0.0 0.0" rotation="0 0 1 0.52359877559829887307710723054658">
+
+        <!-- Stripes -->
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="1.0 0.270588235 0.0" shininess="0.0" />
+          </Appearance>
+          <Polygon points="0.0 -0.75 0.0   0.0 -1.5 0.0   0.0 -1.5 0.5" />"
+        </Shape>
+
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="1.0 0.270588235 0.0" shininess="0.0" />
+          </Appearance>
+          <Polygon points="0.0 0.0 0.0  0.0 0.0 0.5   0.0 -1.5 1.5 0.0 -1.5 1.0" />
+        </Shape>
+
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="1.0 0.270588235 0.0" shininess="0.0" />
+          </Appearance>
+          <Polygon points="0.0 0.0 1.0  0.0 0.0 1.5   0.0 -1.5 2.5   0.0 -1.5 2.0" />
+        </Shape>
+
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="1.0 0.270588235 0.0" shininess="0.0" />
+          </Appearance>
+          <Polygon points="0.0 0.0 2.0   0.0 0.0 2.5    0.0 -0.75 3.0   0.0 -1.5 3.0" />
+        </Shape>
+      </Transform>
+
+      <CutPlane anchor="0.0 0.0 0.0" normal="1.0 0.0 0.0" />
+      <CutPlane anchor="0.0 -3.5 0.0" normal="0.0 -1.0 0.0" />
+      <Transform rotation="0 0 1 -0.52359877559829887307710723054658">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="0.960784314 0.960784314 0.960784314" shininess="0.0" />
+          </Appearance>
+          <Cylinder height="0.00000000000000001" radius="0.1" />"
+        </Shape>
+      </Transform>
+
+      <CutPlane anchor="0.0 0.0 0.0" normal="-1.0 0.0 0.0" />
+      <CutPlane anchor="0.0 -3.5 0.0" normal="0.0 -1.0 0.0" />
+      <Transform rotation="0 0 1 0.52359877559829887307710723054658">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="0.960784314 0.960784314 0.960784314" shininess="0.0" />
+          </Appearance>
+          <Cylinder height="0.00000000000000001" radius="0.1" />"
+        </Shape>
+      </Transform>
+
+      <CutPlane anchor="0.0 0.0 0.0" normal="1.0 0.0 0.0" />
+      <CutPlane anchor="0.0 -3.5 0.0" normal="0.0 -1.0 0.0" />
+      <Transform translation="0.0 0.0 3.0"  rotation="0 0 1 -0.52359877559829887307710723054658">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="0.960784314 0.960784314 0.960784314" shininess="0.0" />
+          </Appearance>
+          <Cylinder height="0.00000000000000001" radius="0.1" />"
+        </Shape>
+      </Transform>
+
+      <CutPlane anchor="0.0 0.0 0.0" normal="-1.0 0.0 0.0" />
+      <CutPlane anchor="0.0 -3.5 0.0" normal="0.0 -1.0 0.0" />
+      <Transform translation="0.0 0.0 3.0" rotation="0 0 1 0.52359877559829887307710723054658">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="0.960784314 0.960784314 0.960784314" shininess="0.0" />
+          </Appearance>
+          <Cylinder height="0.00000000000000001" radius="0.1" />"
+        </Shape>
+      </Transform>
+    </Transform>
+
+
+    <!-- Fence -->
+    <Transform translation="-3.0 4.2 12.0">
+      <!-- Fence left -->
+      <Shape>
+        <Appearance>
+          <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+        </Appearance>
+        <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+      </Shape>
+      <Transform translation="-1.1 0.0 0.0">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+          </Appearance>
+          <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+        </Shape>
+      </Transform>
+      <Transform translation="-2.2 0.0 0.0">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+          </Appearance>
+          <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+        </Shape>
+      </Transform>
+      <Transform translation="-3.3 0.0 0.0">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+          </Appearance>
+          <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+        </Shape>
+      </Transform>
+      <Transform translation="-4.4 0.0 0.0">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+          </Appearance>
+          <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+        </Shape>
+      </Transform>
+      <Transform translation="-5.5 0.0 0.0">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+          </Appearance>
+          <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+        </Shape>
+      </Transform>
+      <Transform translation="-6.6 0.0 0.0">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+          </Appearance>
+          <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+        </Shape>
+      </Transform>
+      <Transform translation="-7.7 0.0 0.0">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+          </Appearance>
+          <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+        </Shape>
+      </Transform>
+      <Transform translation="-8.8 0.0 0.0">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+          </Appearance>
+          <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+        </Shape>
+      </Transform>
+      <Transform translation="-9.9 0.0 0.0">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+          </Appearance>
+          <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+        </Shape>
+      </Transform>
+      <Transform translation="-11.0 0.0 0.0">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+          </Appearance>
+          <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+        </Shape>
+      </Transform>
+      <Transform translation="-12.1 0.0 0.0">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+          </Appearance>
+          <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+        </Shape>
+      </Transform>
+      <Transform translation="-13.2 0.0 0.0">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+          </Appearance>
+          <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+        </Shape>
+      </Transform>
+      <Transform translation="-14.3 0.0 0.0">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+          </Appearance>
+          <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+        </Shape>
+      </Transform>
+      <Transform translation="-15.4 0.0 0.0">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+          </Appearance>
+          <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+        </Shape>
+      </Transform>
+      <Transform translation="-16.5 0.0 0.0">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+          </Appearance>
+          <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+        </Shape>
+      </Transform>
+
+      <!-- Fence right -->
+      <Transform translation="17.8 0.0 0.0">
+        <Transform translation="-1.1 0.0 0.0">
+          <Shape>
+            <Appearance>
+              <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+            </Appearance>
+            <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+          </Shape>
+        </Transform>
+        <Transform translation="-2.2 0.0 0.0">
+          <Shape>
+            <Appearance>
+              <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+            </Appearance>
+            <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+          </Shape>
+        </Transform>
+        <Transform translation="-3.3 0.0 0.0">
+          <Shape>
+            <Appearance>
+              <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+            </Appearance>
+            <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+          </Shape>
+        </Transform>
+        <Transform translation="-4.4 0.0 0.0">
+          <Shape>
+            <Appearance>
+              <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+            </Appearance>
+            <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+          </Shape>
+        </Transform>
+        <Transform translation="-5.5 0.0 0.0">
+          <Shape>
+            <Appearance>
+              <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+            </Appearance>
+            <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+          </Shape>
+        </Transform>
+        <Transform translation="-6.6 0.0 0.0">
+          <Shape>
+            <Appearance>
+              <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+            </Appearance>
+            <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+          </Shape>
+        </Transform>
+        <Transform translation="-7.7 0.0 0.0">
+          <Shape>
+            <Appearance>
+              <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+            </Appearance>
+            <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+          </Shape>
+        </Transform>
+        <Transform translation="-8.8 0.0 0.0">
+          <Shape>
+            <Appearance>
+              <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+            </Appearance>
+            <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+          </Shape>
+        </Transform>
+        <Transform translation="-9.9 0.0 0.0">
+          <Shape>
+            <Appearance>
+              <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+            </Appearance>
+            <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+          </Shape>
+        </Transform>
+        <Transform translation="-11.0 0.0 0.0">
+          <Shape>
+            <Appearance>
+              <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+            </Appearance>
+            <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+          </Shape>
+        </Transform>
+        <Transform translation="-12.1 0.0 0.0">
+          <Shape>
+            <Appearance>
+              <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+            </Appearance>
+            <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+          </Shape>
+        </Transform>
+        <Transform translation="-13.2 0.0 0.0">
+          <Shape>
+            <Appearance>
+              <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+            </Appearance>
+            <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+          </Shape>
+        </Transform>
+        <Transform translation="-14.3 0.0 0.0">
+          <Shape>
+            <Appearance>
+              <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+            </Appearance>
+            <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+          </Shape>
+        </Transform>
+        <Transform translation="-15.4 0.0 0.0">
+          <Shape>
+            <Appearance>
+              <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+            </Appearance>
+            <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+          </Shape>
+        </Transform>
+        <Transform translation="-16.5 0.0 0.0">
+          <Shape>
+            <Appearance>
+              <Material ambientIntensity="0.2"  diffuseColor="0.545098039 0.270588235 0.074509804" specularColor="1.0 1.0 1.0" shininess="0.0" />
+            </Appearance>
+            <Polygon points="0.0 0.0 0.0   -1.0 0.0 0.0   -1.0 -6.0 0.0   0.0 -6.0 0.0"/>
+          </Shape>
+        </Transform>
+
+      </Transform>
+    </Transform>
+
+
+    <!-- P' = T * C * R * SR * S * -SR * -C * Pt -->
+    <!--<Transform translation="-2 2 0">
+      <Transform translation="2 -2 0">
+        <Transform  rotation="0 1 0 1.5707963267948966192313216916398">
+          <Transform rotation="1 0 0 1.5707963267948966192313216916398">-->
+            
+          <!--</Transform>
+        </Transform>
+      </Transform>
+    </Transform>-->
+
+
+    <!-- Cone #1 -->
+    <Transform translation="0.0 1.8 -7.0" >
+      <Transform rotation="0 0 1 3.1415926535897932384626433832795">
+        <CutPlane anchor="0.0 -0.8 0.0" normal="0.0 1.0 0.0" />
+        <CutPlane anchor="0.0 -1.4 0.0" normal="0.0 -1.0 0.0" />
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="1.0 0.270588235 0.0" shininess="0.0" />
+          </Appearance>
+          <Cone bottomRadius="0.8" height="3.0"/>
+        </Shape>
+
+        <CutPlane anchor="0.0 -1.4 0.0" normal="0.0 1.0 0.0" />
+        <CutPlane anchor="0.0 -2.4 0.0" normal="0.0 -1.0 0.0" />
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="1.0 1.0 1.0" shininess="0.0" />
+          </Appearance>
+          <Cone bottomRadius="0.8" height="3.0"/>
+        </Shape>
+
+        <CutPlane anchor="0.0 -2.4 0.0" normal="0.0 1.0 0.0" />
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="1.0 0.270588235 0.0" shininess="0.0" />
+          </Appearance>
+          <Cone bottomRadius="0.8" height="3.0"/>
+        </Shape>
+
+        <CutPlane anchor="0.0 -3.0 0.0" normal="0.0 1.0 0.0" />
+        <CutPlane anchor="0.0 -3.2 0.0" normal="0.0 -1.0 0.0" />
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="1.0 0.270588235 0.0" shininess="0.0" />
+          </Appearance>
+          <Cylinder radius="1.0" height="0.00000000000000001" />
+        </Shape>
+
+        <Transform translation="0.0 -3.0 0.0" rotation="1 0 0 1.5707963267948966192313216916398">
+          <Shape>
+            <Appearance>
+              <Material ambientIntensity="0.2" diffuseColor="1.0 0.270588235 0.0" shininess="0.0" />
+            </Appearance>
+            <Disk outerRadius="1.0" />
+          </Shape>
+        </Transform>
+      </Transform>
+    </Transform>
+
+    <!-- Cone #2 -->
+    <Transform translation="7.0 1.8 -2.0" >
+      <Transform rotation="0 0 1 3.1415926535897932384626433832795">
+        <CutPlane anchor="0.0 -0.8 0.0" normal="0.0 1.0 0.0" />
+        <CutPlane anchor="0.0 -1.4 0.0" normal="0.0 -1.0 0.0" />
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="1.0 0.270588235 0.0" shininess="0.0" />
+          </Appearance>
+          <Cone bottomRadius="0.8" height="3.0"/>
+        </Shape>
+
+        <CutPlane anchor="0.0 -1.4 0.0" normal="0.0 1.0 0.0" />
+        <CutPlane anchor="0.0 -2.4 0.0" normal="0.0 -1.0 0.0" />
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="1.0 1.0 1.0" shininess="0.0" />
+          </Appearance>
+          <Cone bottomRadius="0.8" height="3.0"/>
+        </Shape>
+
+        <CutPlane anchor="0.0 -2.4 0.0" normal="0.0 1.0 0.0" />
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="1.0 0.270588235 0.0" shininess="0.0" />
+          </Appearance>
+          <Cone bottomRadius="0.8" height="3.0"/>
+        </Shape>
+
+        <CutPlane anchor="0.0 -3.0 0.0" normal="0.0 1.0 0.0" />
+        <CutPlane anchor="0.0 -3.2 0.0" normal="0.0 -1.0 0.0" />
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="1.0 0.270588235 0.0" shininess="0.0" />
+          </Appearance>
+          <Cylinder radius="1.0" height="0.00000000000000001" />
+        </Shape>
+
+        <Transform translation="0.0 -3.0 0.0" rotation="1 0 0 1.5707963267948966192313216916398">
+          <Shape>
+            <Appearance>
+              <Material ambientIntensity="0.2" diffuseColor="1.0 0.270588235 0.0" shininess="0.0" />
+            </Appearance>
+            <Disk outerRadius="1.0" />
+          </Shape>
+        </Transform>
+      </Transform>
+    </Transform>
+
+    <!-- Cone #3 -->
+    <Transform translation="7.0 1.8 -7.0" >
+      <Transform rotation="0 0 1 3.1415926535897932384626433832795">
+        <CutPlane anchor="0.0 -0.8 0.0" normal="0.0 1.0 0.0" />
+        <CutPlane anchor="0.0 -1.4 0.0" normal="0.0 -1.0 0.0" />
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="1.0 0.270588235 0.0" shininess="0.0" />
+          </Appearance>
+          <Cone bottomRadius="0.8" height="3.0"/>
+        </Shape>
+
+        <CutPlane anchor="0.0 -1.4 0.0" normal="0.0 1.0 0.0" />
+        <CutPlane anchor="0.0 -2.4 0.0" normal="0.0 -1.0 0.0" />
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="1.0 1.0 1.0" shininess="0.0" />
+          </Appearance>
+          <Cone bottomRadius="0.8" height="3.0"/>
+        </Shape>
+
+        <CutPlane anchor="0.0 -2.4 0.0" normal="0.0 1.0 0.0" />
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="1.0 0.270588235 0.0" shininess="0.0" />
+          </Appearance>
+          <Cone bottomRadius="0.8" height="3.0"/>
+        </Shape>
+
+        <CutPlane anchor="0.0 -3.0 0.0" normal="0.0 1.0 0.0" />
+        <CutPlane anchor="0.0 -3.2 0.0" normal="0.0 -1.0 0.0" />
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="1.0 0.270588235 0.0" shininess="0.0" />
+          </Appearance>
+          <Cylinder radius="1.0" height="0.00000000000000001" />
+        </Shape>
+
+        <Transform translation="0.0 -3.0 0.0" rotation="1 0 0 1.5707963267948966192313216916398">
+          <Shape>
+            <Appearance>
+              <Material ambientIntensity="0.2" diffuseColor="1.0 0.270588235 0.0" shininess="0.0" />
+            </Appearance>
+            <Disk outerRadius="1.0" />
+          </Shape>
+        </Transform>
+      </Transform>
+    </Transform>
+
+
+    <!-- House -->
+    <Transform translation="3.0 4.2 20">
+      <!-- Wall -->
+      <Shape>
+        <Appearance>
+          <Material ambientIntensity="0.2"  diffuseColor="1.0 0.980392157 0.803921569" specularColor="1.0 1.0 1.0" shininess="0.0" />
+        </Appearance>
+        <Polygon points="-9.0 0.0 0.0   9.0 0.0 0.0  9.0  -11.0 0.0    -9.0 -11.0 0.0  " />
+      </Shape>
+      <!-- Window -->
+      <Transform translation="0.0 0.0 -0.000000001">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2"  diffuseColor="0.698039216 0.874509804 0.933333333" specularColor="1.0 1.0 1.0" shininess="0.2" />
+          </Appearance>
+          <Polygon points="-6.0 -3.0 0.0   2.0 -3.0 0.0   2.0 -8.0 0.0    -6.0 -8.0 0.0" />
+        </Shape>
+      </Transform>
+      <!-- Roof -->
+      <Transform translation="0.0 -9.0 -4.0" rotation="1 0 0 -1.0471975511965977461542144610932">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2"  diffuseColor="1.0 0.270588235 0.0" specularColor="1.0 1.0 1.0" shininess="0.0" />
+          </Appearance>
+          <Polygon points="-9.0 0.0 0.0   9.0 0.0 0.0  9.0  -11.0 0.0    -9.0 -11.0 0.0  " />
+        </Shape>
+      </Transform>
+    </Transform>
+    
+    
+    <!-- Street, etc. -->
+    <Transform translation="3.0 5.0 -4.0">
+      <!-- grass -->
+      <CutPlane anchor="0.0 0.0 100.0" normal="0.0 0.0 1.0" />
+      <CutPlane anchor="0.0 0.0 15.0" normal="0.0 0.0 -1.0" />
+      <Shape>
+        <Appearance>
+          <Material ambientIntensity="0.8" diffuseColor="0.196078431 0.803921569 0.196078431" shininess="0" />
+        </Appearance>
+        <Disk outerRadius="0.1" anti="true"  />
+      </Shape>
+
+      <!-- Street -->
+      <Transform rotation="1 0 0 1.5707963267948966192313216916398">
+        <Shape>
+          <Appearance>
+            <ImageTexture
+              url='"" "C:\Documents and Settings\merizald\My Documents\Visual Studio 2005\Projects\RayTracer\RayTracer\textures\sidewalk.avs"'
+              north="0.0 -1.0 0.0"
+              greenwich="0.0 0.0 -1.0"
+              minHeight="0.0"
+              maxHeight="5"
+              vTile="4"
+              hTile="20"/>
+
+            <Material ambientIntensity="0.1"
+                      diffuseColor="0.519607843 0.519607843 0.519607843"
+                      shininess="0"            
+                      specularColor="1.0 1.0 1.0"
+                      diffusiveness="1.0"            
+                      reflectiveness="0.0"
+                      transparency="0.0"
+                      translucency="0.0"/>
+
+          </Appearance>
+          <Disk outerRadius="2.0" anti="true" widthLeft="30.0" widthRight="10.0" heightTop="10.0" heightBottom="10.0"  />
+        </Shape>
+      </Transform>
+
+      <!-- Sidewalk -->
+      <Transform translation="0.0 0.0 10.0" >
+        <Transform translation="-50.0 -0.8 0.0" rotation="1 0 0 -1.5707963267948966192313216916398">
+          <Shape>
+            <Appearance>
+              <ImageTexture
+                url='"" "C:\Documents and Settings\merizald\My Documents\Visual Studio 2005\Projects\RayTracer\RayTracer\textures\sidewalk.avs"'
+                north="0.0 -1.0 0.0"
+                greenwich="0.0 0.0 -1.0"
+                minHeight="0"
+                maxHeight="5"
+                vTile="3"
+                hTile="30"/>
+
+              <Material ambientIntensity="0.1"
+                diffuseColor="0.619607843 0.619607843 0.619607843"
+                specularColor="1.0 1.0 1.0"
+                diffusiveness="1.0"
+                transparency="0.0"
+                shininess="0.0" />
+            </Appearance>
+            <Polygon points="0.0 0.0 0.0   100.0 0.0 0.0   100.0 -6.0 0.0    0 -6.0 0.0" />
+          </Shape>
+        </Transform>
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.1" diffuseColor="0.619607843 0.619607843 0.619607843" shininess="0" />
+          </Appearance>
+          <Polygon points="-50.0 0.0 0.0   50.0 0.0 0.0   50.0 -0.8 0.0    -50 -0.8 0.0" />
+        </Shape>
+      </Transform>
+      <!-- Sewer -->
+      <Transform rotation="1 0 0 3.1415926535897932384626433832795">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffuseColor="0.188235294 0.188235294 0.188235294" shininess="0" />
+          </Appearance>
+          <Cylinder radius="2.0" height="3.0" top="false" bottom="false" />
+        </Shape>
+      </Transform>
+    </Transform>
+
+    <!-- Sewer Cover -->
+    <Transform translation="1.4 4.9 -1.4" >
+      <Shape>
+        <Appearance>
+          <Material ambientIntensity="0.2" difussiveCoefficient="0.6" diffuseColor="0.290196078 0.290196078 0.290196078" shininess="0.0" />
+        </Appearance>
+        <Cylinder radius="2.0" height="0.2" top="true" bottom="false"/>
+      </Shape>
+    </Transform>    
+    
+    <!-- X Axis-->
+    <!--
+    <Transform rotation="0 0 1 1.5707963267948966192313216916398">
+      <Shape>
+        <Appearance>
+          <Material ambientIntensity="0.2" diffuseColor="0.0 0.5 0.5" specularColor="1.0 1.0 1.0" shininess="0.0"/>
+        </Appearance>
+        <Cylinder radius="0.05" height="0.00000000000000001" />
+      </Shape>
+    </Transform>-->
+    <!-- Y Axis-->
+    <!--
+    <Shape>
+      <Appearance>
+        <Material ambientIntensity="0.2" diffuseColor="0.0 0.5 0.5" specularColor="1.0 1.0 1.0" shininess="0.0"/>
+      </Appearance>
+      <Cylinder radius="0.05" height="0.00000000000000001" />
+    </Shape>
+    -->
+    <!-- Z Axis-->
+    <!--
+    <Transform rotation="1 0 0 1.5707963267948966192313216916398">
+      <Shape>
+        <Appearance>
+          <Material ambientIntensity="0.2" diffuseColor="0.0 0.5 0.5" specularColor="1.0 1.0 1.0" shininess="0.0"/>
+        </Appearance>
+        <Cylinder radius="0.05" height="0.00000000000000001" />
+      </Shape>
+    </Transform>
+     <PointLight intensity="0.5" location="-4 0.0 -8.0"  attenuation="1.0 0.03 0.0" />
+    -->
+
+    <!---->
+    <PointLight intensity="0.6" location="-4 -4.0 -1.0"  attenuation="0.1 0.02 0.008" />
+
+    <PointLight intensity="0.6" location="4 -4.0 -1.0"  attenuation="0.1 0.02 0.008" />
+
+
+    <PointLight intensity="0.8" location="-4 -5.0 -8.0"  attenuation="0.1 0.02 0.008" />
+
+    <PointLight intensity="0.8  " location="4 -5.0 -8.0"  attenuation="0.1 0.02 0.008" />
+
+    <PointLight intensity="0.0" location="0.0 -5.0 -5.0"  attenuation="0.1 0.02 0.008" />
+    <!-- Back light -->
+    <!-- Back light 
+    <PointLight intensity="0.4" location="-8 -6 14"  attenuation="1.0 0.0 0.0" />-->
+
+    <!--<PointLight intensity="0.5" location="-8 -6 14"  attenuation="1.0 0.00 0.0" />-->
+  </Scene>
+</X3D>
+

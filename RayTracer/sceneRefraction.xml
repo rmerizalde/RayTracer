@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<X3D version="3.0" profile="Core">
+  <Scene>
+    <!-- 10 -5 -20 -->
+    <Viewpoint position="0.0 -5.0 -60" />
+
+    <Transform translation="-6.0 -5.0 -6.0">
+      <Transform translation="-1.5 3.0 6.0">
+        <Shape>
+          <Appearance>
+            <ImageTexture
+               url='"checkerL.avs" "" ""'
+               north="0.0 1.0 0.0"
+               greenwich="0.0 0.0 -1.0"
+               vTile="1"
+               hTile="1"
+               minHeight="0.0"
+               maxHeight="0.1"
+                />
+            <Material ambientIntensity="0.1" diffusiveness="0.8" transparency="0.0" reflectiveness="0.0" />
+          </Appearance>
+          <Cylinder radius="0.5" height="6.0" />
+        </Shape>
+      </Transform>
+      <Transform translation="0.0 0.0 -6.0">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffusiveness="0.1" transparency="0.9" reflectiveness="0.0" refractionIndex="1.33157" 
+                      shininess="1.0" specularReflectionExponent="300" specularColor="1.0 1.0 1.0"/>
+          </Appearance>
+          <Sphere radius="2.0" />
+        </Shape>
+      </Transform>
+    </Transform>
+    <Transform translation="6.0 -5.0 -6.0">
+      <Transform translation="1.5 3.0 6.0">
+        <Shape>
+          <Appearance>
+            <ImageTexture
+               url='"checkerL.avs" "" ""'
+               north="0.0 1.0 0.0"
+               greenwich="0.0 0.0 -1.0"
+               vTile="1"
+               hTile="1"
+               minHeight="0.0"
+               maxHeight="0.1"
+                />
+            <Material ambientIntensity="0.1" diffusiveness="0.8" transparency="0.0" reflectiveness="0.0" />
+          </Appearance>
+          <Cylinder radius="0.5" height="6.0" />
+        </Shape>
+      </Transform>
+      <Transform translation="0.0 0.0 -6.0">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffusiveness="0.1" transparency="0.9" reflectiveness="0.0" refractionIndex="1.51714"
+                      shininess="1.0" specularReflectionExponent="300" specularColor="1.0 1.0 1.0"/>
+          </Appearance>
+          <Sphere radius="2.0" />
+        </Shape>
+      </Transform>
+    </Transform>
+
+    <Transform translation="-6.0 4.0 -6.0">
+      <Transform translation="-1.5 5.0 6.0">
+        <Shape>
+          <Appearance>
+            <ImageTexture
+               url='"checkerL.avs" "" ""'
+               north="0.0 1.0 0.0"
+               greenwich="0.0 0.0 -1.0"
+               vTile="1"
+               hTile="1"
+               minHeight="0.0"
+               maxHeight="0.1"
+                />
+            <Material ambientIntensity="0.1" diffusiveness="0.8" transparency="0.0" reflectiveness="0.0" />
+          </Appearance>
+          <Cylinder radius="0.5" height="6.0" />
+        </Shape>
+      </Transform>
+      <Transform translation="0.0 0.0 -6.0">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffusiveness="0.1" transparency="0.9" reflectiveness="0.0" refractionIndex="1.309"
+                      shininess="1.0" specularReflectionExponent="300" specularColor="1.0 1.0 1.0"/>
+          </Appearance>
+          <Sphere radius="2.0" />
+        </Shape>
+      </Transform>
+    </Transform>
+    <Transform translation="6.0 4.0 -6.0">
+      <Transform translation="1.5 5.0 6.0">
+        <Shape>
+          <Appearance>
+            <ImageTexture
+               url='"checkerL.avs" "" ""'
+               north="0.0 1.0 0.0"
+               greenwich="0.0 0.0 -1.0"
+               vTile="1"
+               hTile="1"
+               minHeight="0.0"
+               maxHeight="0.1"
+                />
+            <Material ambientIntensity="0.1" diffusiveness="0.8" transparency="0.0" reflectiveness="0.0" />
+          </Appearance>
+          <Cylinder radius="0.5" height="6.0" />
+        </Shape>
+      </Transform>
+      <Transform translation="0.0 0.0 -6.0">
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity="0.2" diffusiveness="0.1" transparency="0.9" reflectiveness="0.0" refractionIndex="2.417"
+                      shininess="1.0" specularReflectionExponent="300" specularColor="1.0 1.0 1.0"/>
+          </Appearance>
+          <Sphere radius="2.0" />
+        </Shape>
+      </Transform>
+    </Transform>
+    
+    
+    <Transform translation="0.0 0.0 -2.0">
+      <Shape>
+        <Appearance>
+          <ImageTexture
+            url='"sphereColor1.avs" "sphereBump1.avs" ""'
+            north="0.0 1.0 0.0"
+            greenwich="0.0 0.0 -1.0"
+            vTile="6"
+            hTile="6"
+            minHeight="0.0"
+            maxHeight="1.5"
+            />
+          <Material ambientIntensity="0.2" diffusiveness="1.0"  
+                    specularColor="1.0 1.0 1.0" shininess="0.1" specularReflectionExponent="10" />
+        </Appearance>
+
+        <Sphere radius="4.0" />
+      </Shape>
+    </Transform>
+
+    <!--<Transform translation="-20.0 6.0 20.0" rotation="1 0 0 1.5707963267948966192313216916398">-->
+    <Transform translation="-20.0 20.0 6.0">
+      <Shape>
+        <Appearance>
+          <ImageTexture
+            url='"" "planeBump.avs" ""'
+            north="0.0 1.0 0.0"
+            greenwich="0.0 0.0 -1.0"
+            vTile="8"
+            hTile="8"
+            minHeight="0.0"
+            maxHeight="0.3"
+            />
+
+          <Material ambientIntensity="0.1" diffusiveness="1.0" diffuseColor="0.4 0.4 0.4" transparency="0.0" reflectiveness="0.0" shininess="0.0"
+                   refractionIndex="1.000261" />
+        </Appearance>
+
+        <Polygon points="0.0 0.0 0.0   40.0 0.0 0.0    40.0 -40.0 0.0   0.0 -40.0 0.0" />
+      </Shape>
+    </Transform>      
+
+
+    <PointLight intensity="1.0" location="-8.0 -1.0 -7.0"  attenuation="0.1 0.02 0.008" />
+    <PointLight intensity="1.0" location="8.0 -1.0 -7.0"  attenuation="0.1 0.02 0.008" />
+    <PointLight intensity="0.8" location="0.0 -3.0 4.0"  attenuation="0.1 0.02 0.008" />
+
+    <PointLight intensity="0.8" location="-6.0 -5 -13.0"  attenuation="0.1 0.02 0.008" />
+    <PointLight intensity="0.8" location="6.0 -5 -13.0"  attenuation="0.1 0.02 0.008" />
+
+    <PointLight intensity="0.8" location="-6.0 5 -13.0"  attenuation="0.1 0.02 0.008" />
+    <PointLight intensity="0.8" location="6.0 5 -13.0"  attenuation="0.1 0.02 0.008" />
+
+    <PointLight intensity="0.9" location="0 0 -7.0"  attenuation="0.1 0.02 0.008" />
+
+
+    <!--
+    <PointLight intensity="0.8" location="0.0 0.0 -13.0"  attenuation="0.1 0.02 0.008" />
+    <PointLight intensity="0.8" location="0.0 0.0 -13.0"  attenuation="0.1 0.02 0.008" />
+
+
+<PointLight intensity="0.6" location="4 -4.0 -1.0"  attenuation="0.1 0.02 0.008" />
+
+
+    <PointLight intensity="0.8" location="-4 -5.0 -8.0"  attenuation="0.1 0.02 0.008" />
+
+    <PointLight intensity="0.8  " location="4 -5.0 -8.0"  attenuation="0.1 0.02 0.008" />
+
+    <PointLight intensity="0.0" location="0.0 -5.0 -5.0"  attenuation="0.1 0.02 0.008" />
+    -->
+    <!-- Back light -->
+    <!--<PointLight intensity="0.4" location="-8 -6 14"  attenuation="1.0 0.0 0.0" />-->
+
+
+  </Scene>
+</X3D>
+

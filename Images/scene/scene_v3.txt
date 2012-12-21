@@ -1,0 +1,16 @@
+Loading scene ...
+3 cones
+25 cross sections
+51 cylinders
+95 disks
+427 polygon
+0 quadric surfaces
+6 spheres
+7274 transformations
+18 lights
+Scene loaded in 0 minutes and 3 seconds (3.047000 seconds)
+Rendering scene ...
+Scene rendered in 503 minutes and 54 seconds (30234.031250 seconds)
+Saving image ...
+Press any key to continiue ...
+

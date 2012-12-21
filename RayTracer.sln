@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RayTracer", "RayTracer\RayTracer.vcproj", "{D06A0832-8323-4FFD-851D-D55BF800CE9A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "X3DTK", "X3DToolKit-1.0\src\X3DTK.vcproj", "{E0F0AF44-1DF2-4CEC-86E8-7B43D9856E5E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jpeg", "jpeg\jpeg.vcproj", "{3278AD82-15A0-4F29-B478-368DB7D16380}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "XercesLib", "xerces-c-src_2_3_0\Projects\Win32\VC7\xerces-all\XercesLib\XercesLib.vcproj", "{152CE948-F659-4206-A50A-1D2B9658EF96}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D06A0832-8323-4FFD-851D-D55BF800CE9A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D06A0832-8323-4FFD-851D-D55BF800CE9A}.Debug|Win32.Build.0 = Debug|Win32
+		{D06A0832-8323-4FFD-851D-D55BF800CE9A}.Release|Win32.ActiveCfg = Release|Win32
+		{D06A0832-8323-4FFD-851D-D55BF800CE9A}.Release|Win32.Build.0 = Release|Win32
+		{E0F0AF44-1DF2-4CEC-86E8-7B43D9856E5E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E0F0AF44-1DF2-4CEC-86E8-7B43D9856E5E}.Debug|Win32.Build.0 = Debug|Win32
+		{E0F0AF44-1DF2-4CEC-86E8-7B43D9856E5E}.Release|Win32.ActiveCfg = Release|Win32
+		{E0F0AF44-1DF2-4CEC-86E8-7B43D9856E5E}.Release|Win32.Build.0 = Release|Win32
+		{3278AD82-15A0-4F29-B478-368DB7D16380}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3278AD82-15A0-4F29-B478-368DB7D16380}.Debug|Win32.Build.0 = Debug|Win32
+		{3278AD82-15A0-4F29-B478-368DB7D16380}.Release|Win32.ActiveCfg = Release|Win32
+		{3278AD82-15A0-4F29-B478-368DB7D16380}.Release|Win32.Build.0 = Release|Win32
+		{152CE948-F659-4206-A50A-1D2B9658EF96}.Debug|Win32.ActiveCfg = Debug|Win32
+		{152CE948-F659-4206-A50A-1D2B9658EF96}.Debug|Win32.Build.0 = Debug|Win32
+		{152CE948-F659-4206-A50A-1D2B9658EF96}.Release|Win32.ActiveCfg = Release|Win32
+		{152CE948-F659-4206-A50A-1D2B9658EF96}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

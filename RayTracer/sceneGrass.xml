@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<X3D version="3.0" profile="Core">
+  <Scene>
+    <!-- 10 -5 -20 -->
+    <Viewpoint position="15 -12.5 -40" />
+
+    <Transform  rotation="1 0 0 1.5707963267948966192313216916398">
+      <!--
+                <CutPlane anchor="0.0  300.0 0.0" normal="0.0 1.0 0.0" />
+                <CutPlane anchor="0.0 -5.0 0.0" normal="0.0 -1.0 0.0" />
+                -->
+      <Transform translation="-5.0 0.0 0.0">
+        <Shape>
+          <Appearance>
+            <ImageTexture
+              url='"Sitework.Planting.Grass.Short.avs" "Sitework.Planting.Grass.Short.bump.avs" "" ""'
+              vTile="2"
+              hTile="2"
+              minHeight="0.0"
+              maxHeight="0.05"/>
+            <Material ambientIntensity="0.2" diffusiveness="1.0" />
+          </Appearance>
+          <Polygon points="0.0 0.0 0.0   20.0 0.0 0.0   20.0 -20.0 0.0   0.0 -20.0 0.0"/>
+        </Shape>
+      </Transform>
+    </Transform>      
+
+
+    <PointLight intensity="0.6" location="0.0 -2.0 10.0"  attenuation="1.0 0.02 0.0008" />
+    <PointLight intensity="0.6" location="5.0 2.0 10.0"  attenuation="0.1 0.02 0.0008" />
+    <PointLight intensity="0.6" location="8.0 -2.0 10.0"  attenuation="0.1 0.02 0.0008" />
+    <PointLight intensity="0.6" location="0.0 -2.0 10.0"  attenuation="1.0 0.02 0.0008" />
+    <PointLight intensity="0.6" location="-5.0 -2.0 5.0"  attenuation="0.1 0.02 0.0008" />
+    <PointLight intensity="0.6" location="0.0 -2.0 4.0"  attenuation="0.1 0.02 0.0008" />
+
+
+  </Scene>
+</X3D>
